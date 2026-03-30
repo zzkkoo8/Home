@@ -1,0 +1,25 @@
+<view class="store-container">
+  <view class="header">
+    <text class="title">积分商城</text>
+  </view>
+
+  <view class="reward-list">
+    <view class="reward-item" wx:for="{{rewards}}" wx:key="id">
+      <view class="reward-info">
+        <text class="name">{{item.name}}</text>
+        <text class="desc" wx:if="{{item.description}}">{{item.description}}</text>
+        <view class="meta">
+          <text class="price">{{item.points_price}}积分</text>
+          <text class="stock">库存: {{item.stock}}</text>
+        </view>
+      </view>
+      <button 
+        class="exchange-btn" 
+        data-reward="{{item}}"
+        bindtap="handleExchange"
+        disabled="{{item.stock <= 0}}"
+      >兑换</button>
+    </view>
+    <view class="empty" wx:if="{{rewards.length === 0}}">暂无奖励</view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="profile-container">
+  <view class="user-card">
+    <view class="avatar">
+      <image wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+      <text wx:else>{{userInfo.nickname || 'U'}}</text>
+    </view>
+    <view class="info">
+      <text class="nickname">{{userInfo.nickname || '未设置昵称'}}</text>
+      <text class="family">家庭: {{userInfo.familyName || '未加入'}}</text>
+    </view>
+  </view>
+
+  <view class="menu-list">
+    <view class="menu-item" bindtap="goToPoints">
+      <text>当前积分</text>
+      <text class="value">{{userInfo.points}} 积分</text>
+    </view>
+    <view class="menu-item" bindtap="goToStore">
+      <text>积分商城</text>
+      <text class="arrow">&gt;</text>
+    </view>
+  </view>
+
+  <view class="logout-btn">
+    <button bindtap="logout">退出登录</button>
+  </view>
+</view>

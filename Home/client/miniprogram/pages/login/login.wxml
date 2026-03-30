@@ -1,0 +1,14 @@
+<view class="login-container">
+  <view class="logo">
+    <text class="title">家庭任务积分</text>
+    <text class="subtitle">通过完成任务获取积分，兑换奖励</text>
+  </view>
+
+  <button class="login-btn" bindtap="handleWxLogin">微信授权登录</button>
+
+  <view class="demo-tip">
+    <text>演示模式：输入任意内容直接登录</text>
+    <input placeholder="输入测试码" bindinput="onCodeInput" value="{{demoCode}}" />
+    <button bindtap="handleDemoLogin">演示登录</button>
+  </view>
+</view>

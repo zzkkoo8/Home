@@ -1,0 +1,20 @@
+<view class="create-container">
+  <view class="header">
+    <text class="back" bindtap="goBack">&lt;</text>
+    <text class="title">创建家庭</text>
+  </view>
+
+  <view class="form">
+    <view class="form-item">
+      <text class="label">家庭名称</text>
+      <input placeholder="请输入家庭名称" bindinput="onFamilyNameInput" value="{{familyName}}" />
+    </view>
+
+    <button class="submit-btn" bindtap="createFamily">创建家庭</button>
+  </view>
+
+  <view class="alt-action">
+    <text>已有家庭？</text>
+    <text class="link" bindtap="goToJoin">加入家庭</text>
+  </view>
+</view>

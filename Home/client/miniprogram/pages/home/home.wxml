@@ -1,0 +1,34 @@
+<view class="home-container">
+  <view class="header">
+    <view class="family-info" bindtap="showFamilyMenu">
+      <text class="family-name">{{familyName}}</text>
+      <text class="invite-code" wx:if="{{inviteCode}}">邀请码: {{inviteCode}}</text>
+    </view>
+    <view class="points-display" bindtap="goToPoints">
+      <text class="points-value">{{points}}</text>
+      <text class="points-label">积分</text>
+    </view>
+  </view>
+
+  <view class="tabs">
+    <view class="tab {{activeTab === 'tasks' ? 'active' : ''}}" bindtap="onTabChange" data-key="tasks">任务</view>
+    <view class="tab {{activeTab === 'pending' ? 'active' : ''}}" bindtap="onTabChange" data-key="pending">待审核</view>
+  </view>
+
+  <view class="task-list">
+    <view class="task-item" wx:for="{{tasks}}" wx:key="id" bindtap="goToTaskDetail" data-id="{{item.id}}">
+      <view class="task-info">
+        <text class="title">{{item.title}}</text>
+        <text class="desc" wx:if="{{item.description}}">{{item.description}}</text>
+        <view class="meta">
+          <text class="points">+{{item.points}}积分</text>
+          <text class="status status-{{item.status}}">{{statusMap[item.status]}}</text>
+        </view>
+      </view>
+      <text class="creator">by {{item.creator.nickname}}</text>
+    </view>
+    <view class="empty" wx:if="{{tasks.length === 0}}">暂无任务</view>
+  </view>
+
+  <view class="fab" bindtap="goToTaskCreate">+</view>
+</view>

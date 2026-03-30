@@ -1,0 +1,12 @@
+{
+  "name": "family-task-points",
+  "version": "1.0.0",
+  "description": "家庭任务积分微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "dev": "echo 'Use WeChat DevTools to develop'",
+    "build": "echo 'Use WeChat DevTools to build'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,78 @@
+.store-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: white;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.reward-list {
+  padding: 12px;
+}
+
+.reward-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.reward-info .name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.reward-info .desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+}
+
+.price {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.stock {
+  color: #999;
+  font-size: 12px;
+}
+
+.exchange-btn {
+  padding: 6px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.exchange-btn[disabled] {
+  background: #ccc;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

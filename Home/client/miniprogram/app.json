@@ -1,0 +1,30 @@
+App({
+  pages: [
+    'pages/login/login',
+    'pages/home/home',
+    'pages/family-create/family-create',
+    'pages/family-join/family-join',
+    'pages/task-create/task-create',
+    'pages/task-detail/task-detail',
+    'pages/points/points',
+    'pages/store/store',
+    'pages/profile/profile'
+  ],
+  window: {
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#667eea',
+    navigationBarTitleText: '家庭任务积分',
+    navigationBarTextStyle: 'white'
+  },
+  tabBar: {
+    color: '#999',
+    selectedColor: '#667eea',
+    backgroundColor: '#fff',
+    list: [
+      { pagePath: 'pages/home/home', text: '任务', iconPath: 'assets/icons/task.png', selectedIconPath: 'assets/icons/task-active.png' },
+      { pagePath: 'pages/points/points', text: '积分', iconPath: 'assets/icons/points.png', selectedIconPath: 'assets/icons/points-active.png' },
+      { pagePath: 'pages/store/store', text: '商城', iconPath: 'assets/icons/store.png', selectedIconPath: 'assets/icons/store-active.png' },
+      { pagePath: 'pages/profile/profile', text: '我的', iconPath: 'assets/icons/profile.png', selectedIconPath: 'assets/icons/profile-active.png' }
+    ]
+  }
+})

@@ -1,0 +1,20 @@
+<view class="join-container">
+  <view class="header">
+    <text class="back" bindtap="goBack">&lt;</text>
+    <text class="title">加入家庭</text>
+  </view>
+
+  <view class="form">
+    <view class="form-item">
+      <text class="label">邀请码</text>
+      <input placeholder="请输入8位邀请码" maxlength="8" bindinput="onInviteCodeInput" value="{{inviteCode}}" />
+    </view>
+
+    <button class="submit-btn" bindtap="joinFamily">加入家庭</button>
+  </view>
+
+  <view class="alt-action">
+    <text>没有邀请码？</text>
+    <text class="link" bindtap="goToCreate">创建家庭</text>
+  </view>
+</view>

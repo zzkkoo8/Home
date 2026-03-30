@@ -1,0 +1,35 @@
+<view class="points-container">
+  <view class="balance-card">
+    <text class="label">我的积分</text>
+    <text class="value">{{app.globalData.points}}</text>
+  </view>
+
+  <view class="tabs">
+    <view class="tab {{activeTab === 'logs' ? 'active' : ''}}" bindtap="onTabChange" data-key="logs">积分明细</view>
+    <view class="tab {{activeTab === 'ranking' ? 'active' : ''}}" bindtap="onTabChange" data-key="ranking">家庭排行</view>
+  </view>
+
+  <view class="content">
+    <view wx:if="{{activeTab === 'logs'}}">
+      <view class="log-item" wx:for="{{logs}}" wx:key="id">
+        <view class="log-info">
+          <text class="reason">{{item.reason}}</text>
+          <text class="time">{{item.created_at}}</text>
+        </view>
+        <text class="amount {{item.amount > 0 ? 'positive' : ''}}">{{item.amount > 0 ? '+' : ''}}{{item.amount}}</text>
+      </view>
+      <view class="empty" wx:if="{{logs.length === 0}}">暂无积分记录</view>
+    </view>
+
+    <view wx:if="{{activeTab === 'ranking'}}">
+      <view class="rank-item" wx:for="{{ranking}}" wx:key="user_id">
+        <view class="rank-info">
+          <text class="rank-num rank-{{index}}">{{index + 1}}</text>
+          <text class="nickname">{{item.nickname}}</text>
+        </view>
+        <text class="points">{{item.points}}积分</text>
+      </view>
+      <view class="empty" wx:if="{{ranking.length === 0}}">暂无排行数据</view>
+    </view>
+  </view>
+</view>
